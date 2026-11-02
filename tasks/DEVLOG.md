@@ -3,6 +3,16 @@
 
 ---
 
+## 2026-11-02 · Claude Code (local) · chore(ci): add DEVLOG check job
+
+**Mode:** Builder
+
+**Did:** added the `devlog` job to `.github/workflows/ci.yml`, pasted from `workflow/agents_workflow/enforcement/ci-devlog-job.yml`. It fails a pull request that does not change `tasks/DEVLOG.md`. It is the backstop for `--no-verify` and cloud sessions.
+
+**Config change:** file `.github/workflows/ci.yml`; old: no `devlog` job; new: `devlog` job, runs on `pull_request` only; rollback: `git revert 433e0c5`.
+
+**State:** branch `agent/claude-code-config-ci-devlog`, PR open against `main`, not merged.
+
 ## 2026-06-06 · Claude (claude.ai) · Project dev setup complete — AGENTS.md, CONTEXT.md, DEVLOG.md, todo.md created
 
 **Mode:** Builder + Strategic
